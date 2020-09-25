@@ -5,7 +5,7 @@ from cartoonizer import Cartoonizer
 
 
 tmp_canvas = Cartoonizer() 
-cap = cv2.VideoCapture('video_4.mp4') 
+cap = cv2.VideoCapture('video_3.mp4') 
 
 frame_width = int(cap.get(3)) 
 frame_height = int(cap.get(4))  
