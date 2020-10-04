@@ -48,7 +48,7 @@ class Cartoonizer:
         img_cartoon = cv2.bitwise_and(img_color, img_edge)
         return img_cartoon
 
-# image = cv2.imread('4.jpg')
+# image = cv2.imread('2.jpg')
 
 # obj = Cartoonizer()
 # image2 = obj.render(image)
