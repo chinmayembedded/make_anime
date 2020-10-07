@@ -3,7 +3,7 @@ import numpy as np
 import time
 from scipy import ndimage
 from scipy.ndimage.filters import convolve
-
+from PIL import ImageEnhance, Image
 
 class Cartoonizer: 
 
@@ -23,7 +23,9 @@ class Cartoonizer:
         num_filters = 10
         for _ in range(num_filters):
             img_color = cv2.bilateralFilter(image, 15, 30, 20) 
-        return img_color
+        converter = ImageEnhance.Color(Image.fromarray(img_color))
+        return np.asarray(converter.enhance(2))
+        # return img_color
     
 
     def edge_detection(self, image):
